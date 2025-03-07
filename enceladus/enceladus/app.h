@@ -1,11 +1,18 @@
 #pragma once
 #include "raylib.h"
 #include "menu.h"
+
 enum appStates
 {
 	EXIT,
 	MAIN_MENU,
-	MATH
+	MATH,
+	ENGLISH
+};
+enum lessons
+{
+	LESSON0,
+	LESSON1
 };
 
 class App {
@@ -19,4 +26,5 @@ public:
 private:
 	Menu menu;
 	int appState;
+	int lessonState;
 };
