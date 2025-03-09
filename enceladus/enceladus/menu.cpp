@@ -9,6 +9,11 @@ Menu::Menu()
 	 Exit = {1300, 900, 200, 50 };
 	 Return = {1000, 900, 200, 50 };
 	 Lesson1 = {100, 200, 275, 75 };
+	 Lesson2 = { 500, 200, 275, 75 };
+	 Lesson3 = { 100, 500, 275, 75 };
+	 Lesson4 = { 500, 500, 275, 75 };
+	 Lesson5 = { 100, 800, 275, 75 };
+	 Lesson6 = { 500, 800, 275, 75 };
 }
 
 void Menu::Draw(int appState, int lessonState)
@@ -36,12 +41,47 @@ void Menu::Draw(int appState, int lessonState)
 			DrawText("Return", 1010, 900, 50, WHITE);
 			DrawRectangleRec(Lesson1, BLACK);
 			DrawText("Lesson1", 125, 200, 55, WHITE);
+			DrawRectangleRec(Lesson2, BLACK);
+			DrawText("Lesson2", 525, 200, 55, WHITE);
+			DrawRectangleRec(Lesson3, BLACK);
+			DrawText("Lesson3", 125, 500, 55, WHITE);
+			DrawRectangleRec(Lesson4, BLACK);
+			DrawText("Lesson4", 525, 500, 55, WHITE);
+			DrawRectangleRec(Lesson5, BLACK);
+			DrawText("Lesson5", 125, 800, 55, WHITE);
+			DrawRectangleRec(Lesson6, BLACK);
+			DrawText("Lesson6", 525, 800, 55, WHITE);
 			break;
 		case 1:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Math", 400, 100, 50, WHITE);
-
+			DrawText("Math1", 400, 100, 50, WHITE);
+			break;
+		case 2:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Math2", 400, 100, 50, WHITE);
+			break;
+		case 3:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Math3", 400, 100, 50, WHITE);
+			break;
+		case 4:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Math4", 400, 100, 50, WHITE);
+			break;
+		case 5:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Math5", 400, 100, 50, WHITE);
+			break;
+		case 6:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Math6", 400, 100, 50, WHITE);
+			break;
 		}
 	break;
 	case 3:
@@ -118,6 +158,55 @@ void Menu::Update(int& appState, int& lessonState)
 			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 			{
 				lessonState = 1;
+				SetMouseCursor(MOUSE_CURSOR_ARROW);
+			}
+		}
+		if (CheckCollisionPointRec(GetMousePosition(), Lesson2))
+		{
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				lessonState = 2;
+				SetMouseCursor(MOUSE_CURSOR_ARROW);
+			}
+
+		}
+		if (CheckCollisionPointRec(GetMousePosition(), Lesson3))
+		{
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				lessonState = 3;
+				SetMouseCursor(MOUSE_CURSOR_ARROW);
+			}
+
+		}
+		if (CheckCollisionPointRec(GetMousePosition(), Lesson4))
+		{
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				lessonState = 4;
+				SetMouseCursor(MOUSE_CURSOR_ARROW);
+			}
+
+		}
+		if (CheckCollisionPointRec(GetMousePosition(), Lesson5))
+		{
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				lessonState = 5;
+				SetMouseCursor(MOUSE_CURSOR_ARROW);
+			}
+
+		}
+		if (CheckCollisionPointRec(GetMousePosition(), Lesson6))
+		{
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				lessonState = 6;
 				SetMouseCursor(MOUSE_CURSOR_ARROW);
 			}
 

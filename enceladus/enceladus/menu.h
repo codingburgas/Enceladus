@@ -12,6 +12,11 @@ private:
 	Rectangle Math;
 	Rectangle English;
 	Rectangle Lesson1;
+	Rectangle Lesson2;
+	Rectangle Lesson3;
+	Rectangle Lesson4;
+	Rectangle Lesson5;
+	Rectangle Lesson6;
 	Rectangle Exit;
 	Rectangle Return;
 };

@@ -12,7 +12,12 @@ enum appStates
 enum lessons
 {
 	LESSON0,
-	LESSON1
+	LESSON1,
+	LESSON2,
+	LESSON3,
+	LESSON4,
+	LESSON5,
+	LESSON6
 };
 
 class App {
