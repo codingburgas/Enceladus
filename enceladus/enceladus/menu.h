@@ -11,6 +11,8 @@ public:
 private:
 	Rectangle Math;
 	Rectangle English;
+	Rectangle Bulgarian;
+	Rectangle Chemistry;
 	Rectangle Lesson1;
 	Rectangle Lesson2;
 	Rectangle Lesson3;

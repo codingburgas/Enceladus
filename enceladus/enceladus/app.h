@@ -7,7 +7,9 @@ enum appStates
 	EXIT,
 	MAIN_MENU,
 	MATH,
-	ENGLISH
+	ENGLISH,
+	BULGARIAN,
+	CHEMISTRY
 };
 enum lessons
 {

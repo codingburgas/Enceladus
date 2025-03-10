@@ -6,6 +6,8 @@ Menu::Menu()
 {
 	 Math = {100, 200, 275, 75};
 	 English = {800, 200, 275, 75};
+	 Bulgarian = { 100, 500, 275, 75 };
+	 Chemistry = { 800, 500, 275, 75 };
 	 Exit = {1300, 900, 200, 50 };
 	 Return = {1000, 900, 200, 50 };
 	 Lesson1 = {100, 200, 275, 75 };
@@ -31,6 +33,10 @@ void Menu::Draw(int appState, int lessonState)
 	DrawText("Math", 145, 200, 75, WHITE);
 	DrawRectangleRec(English, BLACK);
 	DrawText("English", 810, 200, 75, WHITE);
+	DrawRectangleRec(Bulgarian, BLACK);
+	DrawText("Bulgarian", 145, 500, 45, WHITE);
+	DrawRectangleRec(Chemistry, BLACK);
+	DrawText("Chemistry", 810, 500, 50, WHITE);
 	break;
 	case 2:
 		switch (lessonState)
@@ -192,6 +198,26 @@ void Menu::Update(int& appState, int& lessonState)
 			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 			{
 				appState = 3;
+				SetMouseCursor(MOUSE_CURSOR_ARROW);
+			}
+
+		}
+		if (CheckCollisionPointRec(GetMousePosition(), Bulgarian))
+		{
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				appState = 4;
+				SetMouseCursor(MOUSE_CURSOR_ARROW);
+			}
+
+		}
+		if (CheckCollisionPointRec(GetMousePosition(), Chemistry))
+		{
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				appState = 4;
 				SetMouseCursor(MOUSE_CURSOR_ARROW);
 			}
 
