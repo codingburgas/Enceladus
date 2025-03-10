@@ -140,10 +140,59 @@ void Menu::Draw(int appState, int lessonState)
 			DrawText("English6", 400, 100, 50, WHITE);
 			break;
 		}
+		break;
+	case 4:
+		switch (lessonState) {
+		case 0:
+			DrawText("Bulgarian", 500, 100, 50, WHITE);
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawRectangleRec(Lesson1, BLACK);
+			DrawText("Lesson1", 125, 200, 55, WHITE);
+			DrawRectangleRec(Lesson2, BLACK);
+			DrawText("Lesson2", 525, 200, 55, WHITE);
+			DrawRectangleRec(Lesson3, BLACK);
+			DrawText("Lesson3", 125, 500, 55, WHITE);
+			DrawRectangleRec(Lesson4, BLACK);
+			DrawText("Lesson4", 525, 500, 55, WHITE);
+			DrawRectangleRec(Lesson5, BLACK);
+			DrawText("Lesson5", 125, 800, 55, WHITE);
+			DrawRectangleRec(Lesson6, BLACK);
+			DrawText("Lesson6", 525, 800, 55, WHITE);
+			break;
+		case 1:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Bulgarian1", 400, 100, 50, WHITE);
+			break;
+		case 2:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Bulgarian2", 400, 100, 50, WHITE);
+			break;
+		case 3:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Bulgarian3", 400, 100, 50, WHITE);
+			break;
+		case 4:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Bulgarian4", 400, 100, 50, WHITE);
+			break;
+		case 5:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Bulgarian5", 400, 100, 50, WHITE);
+			break;
+		case 6:
+			DrawRectangleRec(Return, BLACK);
+			DrawText("Return", 1010, 900, 50, WHITE);
+			DrawText("Bulgarian6", 400, 100, 50, WHITE);
+			break;
+		}
 
 	}
-	
-
 }
 
 void Menu::Update(int& appState, int& lessonState)
@@ -342,7 +391,66 @@ void Menu::Update(int& appState, int& lessonState)
 					lessonState = 6;
 					SetMouseCursor(MOUSE_CURSOR_ARROW);
 				}
+			}
+			break;
+		case 4:
+			if (CheckCollisionPointRec(GetMousePosition(), Lesson1))
+			{
+				SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+				if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+				{
+					lessonState = 1;
+					SetMouseCursor(MOUSE_CURSOR_ARROW);
+				}
+			}
+			if (CheckCollisionPointRec(GetMousePosition(), Lesson2))
+			{
+				SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+				if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+				{
+					lessonState = 2;
+					SetMouseCursor(MOUSE_CURSOR_ARROW);
+				}
 
+			}
+			if (CheckCollisionPointRec(GetMousePosition(), Lesson3))
+			{
+				SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+				if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+				{
+					lessonState = 3;
+					SetMouseCursor(MOUSE_CURSOR_ARROW);
+				}
+
+			}
+			if (CheckCollisionPointRec(GetMousePosition(), Lesson4))
+			{
+				SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+				if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+				{
+					lessonState = 4;
+					SetMouseCursor(MOUSE_CURSOR_ARROW);
+				}
+
+			}
+			if (CheckCollisionPointRec(GetMousePosition(), Lesson5))
+			{
+				SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+				if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+				{
+					lessonState = 5;
+					SetMouseCursor(MOUSE_CURSOR_ARROW);
+				}
+
+			}
+			if (CheckCollisionPointRec(GetMousePosition(), Lesson6))
+			{
+				SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+				if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+				{
+					lessonState = 6;
+					SetMouseCursor(MOUSE_CURSOR_ARROW);
+				}
 			}
 			break;
 	}
