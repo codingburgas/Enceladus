@@ -4,10 +4,10 @@ using namespace std;
 
 Menu::Menu()
 {
-	 Math = {100, 200, 275, 75};
-	 English = {800, 200, 275, 75};
-	 Bulgarian = { 100, 500, 275, 75 };
-	 Chemistry = { 800, 500, 275, 75 };
+	 Math = {200, 250, 275, 75};
+	 English = {900, 250, 275, 75};
+	 Bulgarian = { 150, 550, 400, 75 };
+	 Chemistry = { 850, 550, 400, 75 };
 	 Exit = {1300, 900, 200, 50 };
 	 Return = {1000, 900, 200, 50 };
 	 Lesson1 = {100, 200, 275, 75 };
@@ -30,13 +30,15 @@ void Menu::Draw(int appState, int lessonState)
 	DrawText("E-Learn", 550, 10, 100, WHITE);
 	DrawText("Coose Your Subject", 400, 100, 75, WHITE);
 	DrawRectangleRec(Math, BLACK);
-	DrawText("Math", 145, 200, 75, WHITE);
+	
+	DrawText("Math", 245, 250, 75, WHITE);
 	DrawRectangleRec(English, BLACK);
-	DrawText("English", 810, 200, 75, WHITE);
+	DrawText("English", 910, 250, 75, WHITE);
 	DrawRectangleRec(Bulgarian, BLACK);
-	DrawText("Bulgarian", 145, 500, 45, WHITE);
+	DrawText("Bulgarian", 175, 550, 75, WHITE);
 	DrawRectangleRec(Chemistry, BLACK);
-	DrawText("Chemistry", 810, 500, 50, WHITE);
+	DrawText("Chemistry", 865, 550, 75, WHITE);
+	
 	break;
 	case 2:
 		switch (lessonState)
