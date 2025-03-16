@@ -8,7 +8,7 @@ enum appStates
 	MAIN_MENU,
 	MATH,
 	ENGLISH,
-	BULGARIAN,
+	BIOLOGY,
 	CHEMISTRY
 };
 enum lessons
