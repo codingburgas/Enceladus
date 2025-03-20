@@ -10,15 +10,17 @@ Menu::Menu()
 	 Chemistry = { 850, 600, 400, 75 };
 	 Exit = {1300, 900, 200, 50 };
 	 Return = {1000, 900, 200, 50 };
+	 Testbutton = { 150, 550, 350, 75 };
 	 Lesson1 = {200, 200, 275, 75 };
 	 Lesson2 = { 1000, 200, 275, 75 };
 	 Lesson3 = { 200, 500, 275, 75 };
 	 Lesson4 = { 1000, 500, 275, 75 };
 	 Lesson5 = { 200, 800, 275, 75 };
 	 Lesson6 = { 1000, 800, 275, 75 };
+	 initialiseTests();
 }
 
-void Menu::Draw(int appState, int lessonState)
+void Menu::Draw(int appState, int lessonState, bool testState)
 {
 	DrawRectangleRec(Exit, BLACK);
 	DrawText("Exit", 1350, 900, 50, WHITE);
@@ -41,6 +43,11 @@ void Menu::Draw(int appState, int lessonState)
 	
 	break;
 	case 2:
+		if (lessonState != 0)
+		{
+			DrawRectangleRec(Testbutton, BLACK);
+			DrawText("Test3", 180, 550, 75, WHITE);
+		}
 		switch (lessonState)
 		{
 		case 0:
@@ -64,6 +71,10 @@ void Menu::Draw(int appState, int lessonState)
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
 			DrawText("Math1", 400, 100, 50, WHITE);
+			if (testState)
+			{
+				MathTest[0].Draw();
+			}
 			break;
 		case 2:
 			DrawRectangleRec(Return, BLACK);
@@ -248,9 +259,8 @@ void Menu::Draw(int appState, int lessonState)
 	}
 }
 
-void Menu::Update(int& appState, int& lessonState)
+void Menu::Update(int& appState, int& lessonState, bool& testState)
 {
-
 	SetMouseCursor(MOUSE_CURSOR_ARROW);
 
 	if (CheckCollisionPointRec(GetMousePosition(), Exit))
@@ -269,6 +279,8 @@ void Menu::Update(int& appState, int& lessonState)
 		SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
 		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 		{
+			testState = false;
+			MathTest[0].Reset();
 			if (appState != 1 && lessonState == 0)
 			{
 				appState = 1;
@@ -390,5 +402,34 @@ void Menu::Update(int& appState, int& lessonState)
 
 		}
 		break;
+	case 1:
+		if (CheckCollisionPointRec(GetMousePosition(), Testbutton))
+		{
+			SetMouseCursor(MOUSE_CURSOR_POINTING_HAND);
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				testState = true;
+				SetMouseCursor(MOUSE_CURSOR_ARROW);
+			}
+		}
+		if (testState)
+		{
+			MathTest[0].Update();
+		}
+		break;
 	}
+}
+
+void Menu::initialiseTests()
+{
+	MathTest[0] = Test(3, 0, 1);
+	MathTest[0].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	MathTest[0].addQuestion("What is 8 + 2", { "ten", "Two", "Three", "one" });
+	MathTest[0].addQuestion("What is 1 + 2", { "One", "Three", "Two", "Four" });
+
+	MathTest[1].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	MathTest[2].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	MathTest[3].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	MathTest[4].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	MathTest[5].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
 }

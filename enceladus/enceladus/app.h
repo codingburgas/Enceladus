@@ -34,4 +34,5 @@ private:
 	Menu menu;
 	int appState;
 	int lessonState;
+	bool testState;
 };

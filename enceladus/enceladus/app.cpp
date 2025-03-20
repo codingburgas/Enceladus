@@ -4,11 +4,12 @@ App::App()
 {
 	appState = MAIN_MENU;
 	lessonState = LESSON0;
+	testState = false;
 }
 
 void App::Update()
 {
-	menu.Update(appState, lessonState);
+	menu.Update(appState, lessonState, testState);
 }
 
 int App::getCurrentAppState()
@@ -18,7 +19,5 @@ int App::getCurrentAppState()
 
 void App::Draw()
 {
-	menu.Draw(appState, lessonState);
+	menu.Draw(appState, lessonState, testState);
 }
-
-
