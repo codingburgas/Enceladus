@@ -8,7 +8,7 @@ enum appStates
 	MAIN_MENU,
 	MATH,
 	ENGLISH,
-	BULGARIAN,
+	BIOLOGY,
 	CHEMISTRY
 };
 enum lessons
@@ -34,4 +34,5 @@ private:
 	Menu menu;
 	int appState;
 	int lessonState;
+	bool testState;
 };
