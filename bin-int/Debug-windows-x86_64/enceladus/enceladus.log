@@ -1,0 +1,6 @@
+﻿  app.cpp
+  main.cpp
+  menu.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  enceladus.vcxproj -> C:\Users\Dimitar\OneDrive - Министерство на образованието и науката\Desktop\Enceladus\Enceladus\bin\Debug-windows-x86_64\enceladus\enceladus.exe
