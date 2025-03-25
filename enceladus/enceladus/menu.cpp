@@ -273,7 +273,16 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 		case 5:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("English5", 400, 100, 50, WHITE);
+			DrawText("Present Perfect", 165, 0, 65, BLACK);
+			DrawText("Forming of Present Perfect:", 10, 100, 50, WHITE);
+			DrawText("have/has + past participle", 10, 175, 50, WHITE);
+			DrawText("Example: I have visited Paris.", 225, 250, 50, WHITE);
+			DrawText("Negative sentances:", 10, 325, 50, WHITE);
+			DrawText("have/has + not + past participle", 10, 400, 50, WHITE);
+			DrawText("Example: I have not (haven’t) eaten sushi before.", 220, 475, 50, WHITE);
+			DrawText("Questions:", 10, 550, 50, WHITE);
+			DrawText("Have/Has + subject + past participle?", 10, 625, 50, WHITE);
+			DrawText("Example: Have you ever been to London?", 225, 700, 50, WHITE);
 			if (testState)
 			{
 				EnglishTest[4].Draw();
@@ -282,7 +291,16 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 		case 6:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("English6", 400, 100, 50, WHITE);
+			DrawText("Past Perfect", 165, 0, 65, BLACK);
+			DrawText("Forming of Present Perfect:", 10, 100, 50, WHITE);
+			DrawText("had + past participle", 10, 175, 50, WHITE);
+			DrawText("Example: I had finished my work before dinner.", 225, 250, 50, WHITE);
+			DrawText("Negative sentances:", 10, 325, 50, WHITE);
+			DrawText("had not (hadn’t) + past participle", 10, 400, 50, WHITE);
+			DrawText("Example: I had not (hadn’t) visited Paris before.", 220, 475, 50, WHITE);
+			DrawText("Questions:", 10, 550, 50, WHITE);
+			DrawText("Had + subject + past participle ? ", 10, 625, 50, WHITE);
+			DrawText("Example: Had you ever been to London before?", 225, 700, 50, WHITE);
 			if (testState)
 			{
 				EnglishTest[5].Draw();
@@ -695,13 +713,13 @@ void Menu::initialiseTests()
 	EnglishTest[3].addQuestion("They __________ (play) football at 5 PM yesterday.", { "were playing?", "are playing", "was playing", "playing" });
 	EnglishTest[3].addQuestion("We __________ (watch) a movie when the power went out.?", { "was watching", "wathing", "were watching", "is watching" });
 
-	EnglishTest[4] = Test(1, 1, 1);
-	EnglishTest[4].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
-	EnglishTest[4].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
-	EnglishTest[4].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	EnglishTest[4] = Test(0, 1, 1);
+	EnglishTest[4].addQuestion("She __________ (finish) her homework already.", { " has finished", " finished", "finish", "was finished" });
+	EnglishTest[4].addQuestion("They __________ (visit) Paris three times.", { " visited", " have visited", " visiting", " been" });
+	EnglishTest[4].addQuestion("I __________ (not see) that movie yet.", { "have seen", "haven't", "seen", " haven't seen" });
 
-	EnglishTest[5] = Test(1, 1, 1);
-	EnglishTest[5].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
-	EnglishTest[5].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
-	EnglishTest[5].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	EnglishTest[5] = Test(2, 1, 3);
+	EnglishTest[5].addQuestion("What you _____ before the teacher arrived?", { " had do", " had finished", "had you done", " have you done" });
+	EnglishTest[5].addQuestion("Had she studied for the test before she ____ it?", { " had taken", " took", " take", " taking" });
+	EnglishTest[5].addQuestion("Why __ they __ the party so early?", { " did leave", " had left", " have left", " had they left" });
 }
