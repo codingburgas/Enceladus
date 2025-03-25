@@ -7,22 +7,21 @@ int main()
     const int screenHeight = 950;
 
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-    
-    App App;
+
+    App* app = new App;
 
     SetTargetFPS(60);
 
     while (!WindowShouldClose())
     {
-        App.Update();
+        app->Update();
         BeginDrawing();
- 
-        App.Draw();
 
-        if (App.getCurrentAppState() == 0)
+        app->Draw();
+        if (app->getCurrentAppState() == 0)
             break;
 
-        ClearBackground(PURPLE);
+        ClearBackground(BLUE);
 
         EndDrawing();
     }
