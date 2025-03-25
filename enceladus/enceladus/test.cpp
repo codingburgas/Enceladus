@@ -25,12 +25,14 @@ Test::Test()
 	correctAnswer3 = 0;
 }
 
+//Returns back the points
 void Test::Reset()
 {
 	testStates = QUESTION1;
 	points = 0;
 }
 
+// Adds a new question and the answers to the test
 void Test::addQuestion(string question, vector<string>answer)
 {
 	if (questions[0].size() == 0)
@@ -59,13 +61,14 @@ void Test::addQuestion(string question, vector<string>answer)
 	}
 }
 
+// Draws the current test state
 void Test::Draw()
 {
 	switch (testStates)
 	{
 	case QUESTION1:
 		DrawRectangleRec(Background, DARKBLUE);
-		DrawText(questions[0].c_str(), 200, 0, 50, BLACK);
+		DrawText(questions[0].c_str(), 200, 0, 50, BLACK); // Draws the  question text
 		for (int i = 0; i < 4; i++)
 		{
 			DrawRectangleRec(answersButtons[i], BLACK);
@@ -99,6 +102,7 @@ void Test::Draw()
 
 }
 
+// Updates test state based on user input
 void Test::Update()
 {
 	switch (testStates)

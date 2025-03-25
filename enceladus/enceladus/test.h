@@ -4,6 +4,7 @@
 #include <vector>
 using namespace std;
 
+//Creates an enum for the test questions
 enum TestWindow
 {
 	QUESTION1,
@@ -32,9 +33,9 @@ private:
 	Rectangle Background;
 	Rectangle EndBackground;
 	Rectangle answersButtons[4] = {
-	{ 100, 200, 200, 75 },
-	{ 500, 200, 200, 100 },
-	{ 100, 700, 200, 100 },
-	{ 500, 700, 200, 100 }
+	{ 100, 200, 400, 75 },
+	{ 700, 200, 400, 75 },
+	{ 100, 700, 400, 75 },
+	{ 700, 700, 400, 75 }
 	};
 };

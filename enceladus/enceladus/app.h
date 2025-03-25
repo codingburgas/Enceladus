@@ -2,6 +2,7 @@
 #include "raylib.h"
 #include "menu.h"
 
+//Creates an enum for the subjects
 enum appStates
 {
 	EXIT,
@@ -11,6 +12,7 @@ enum appStates
 	BIOLOGY,
 	CHEMISTRY
 };
+//Creates an enum for the lessons
 enum lessons
 {
 	LESSON0,
@@ -22,6 +24,7 @@ enum lessons
 	LESSON6
 };
 
+// The main class for the app
 class App {
 public:
 	App();

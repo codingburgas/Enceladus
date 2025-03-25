@@ -20,6 +20,7 @@ Menu::Menu()
 	 initialiseTests();
 }
 
+//Draws all of the menus
 void Menu::Draw(int appState, int lessonState, bool testState)
 {
 	DrawRectangleRec(Exit, BLACK);
@@ -309,6 +310,11 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 		}
 		break;
 	case 4:
+		if (lessonState != 0)
+		{
+			DrawRectangleRec(Testbutton, BLACK);
+			DrawText("Test", 730, 900, 50, WHITE);
+		}
 		switch (lessonState) {
 		case 0:
 			DrawText("Subject: Biology", 350, 0, 100, WHITE);
@@ -330,36 +336,119 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 		case 1:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Biology1", 400, 100, 50, WHITE);
+			DrawText("Digestive System", 165, 0, 65, BLACK);
+			DrawText("Main Functions:", 10, 100, 50, WHITE);
+			DrawText("Processing and absorbing food", 10, 175, 50, WHITE);
+			DrawText("Example: The stomach breaks down food chemically.", 225, 250, 50, WHITE);
+			DrawText("Organs:", 10, 325, 50, WHITE);
+			DrawText("Mouth, esophagus, stomach, intestines", 10, 400, 50, WHITE);
+			DrawText("Example: The small intestine absorbs nutrients.", 220, 475, 50, WHITE);
+			DrawText("Process:", 10, 550, 50, WHITE);
+			DrawText("Mechanical and chemical digestion", 10, 625, 50, WHITE);
+			DrawText("Example: Chewing is mechanical digestion.", 225, 700, 50, WHITE);
+			if (testState)
+			{
+				BiologyTest[0].Draw();
+			}
 			break;
 		case 2:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Biology2", 400, 100, 50, WHITE);
+			DrawText("Respiratory System", 165, 0, 65, BLACK);
+			DrawText("Main Function:", 10, 100, 50, WHITE);
+			DrawText("Gas exchange in the lungs", 10, 175, 50, WHITE);
+			DrawText("Example: Oxygen enters, CO2 exits.", 225, 250, 50, WHITE);
+			DrawText("Organs:", 10, 325, 50, WHITE);
+			DrawText("Nose, trachea, bronchi, lungs", 10, 400, 50, WHITE);
+			DrawText("Example: The trachea connects throat to lungs.", 220, 475, 50, WHITE);
+			DrawText("Process:", 10, 550, 50, WHITE);
+			DrawText("Inhaling and exhaling", 10, 625, 50, WHITE);
+			DrawText("Example: The diaphragm helps us breathe.", 225, 700, 50, WHITE);
+			if (testState)
+			{
+				BiologyTest[1].Draw();
+			}
 			break;
 		case 3:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Biology3", 400, 100, 50, WHITE);
+			DrawText("Circulatory System", 165, 0, 65, BLACK);
+			DrawText("Main Function:", 10, 100, 50, WHITE);
+			DrawText("Transporting oxygen and nutrients", 10, 175, 50, WHITE);
+			DrawText("Example: The heart pumps blood.", 225, 250, 50, WHITE);
+			DrawText("Organs:", 10, 325, 50, WHITE);
+			DrawText("Heart, arteries, veins", 10, 400, 50, WHITE);
+			DrawText("Example: Arteries carry oxygen-rich blood.", 220, 475, 50, WHITE);
+			DrawText("Process:", 10, 550, 50, WHITE);
+			DrawText("Blood circulation through the body", 10, 625, 50, WHITE);
+			DrawText("Example: Veins return blood to the heart.", 225, 700, 50, WHITE);
+			if (testState)
+			{
+				BiologyTest[2].Draw();
+			}
 			break;
 		case 4:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Biology4", 400, 100, 50, WHITE);
+			DrawText("Endocrine System", 165, 0, 65, BLACK);
+			DrawText("Main Function:", 10, 100, 50, WHITE);
+			DrawText("Regulating body functions with hormones", 10, 175, 50, WHITE);
+			DrawText("Example: The pancreas produces insulin.", 225, 250, 50, WHITE);
+			DrawText("Organs:", 10, 325, 50, WHITE);
+			DrawText("Thyroid, pancreas, adrenal glands", 10, 400, 50, WHITE);
+			DrawText("Example: The thyroid regulates metabolism.", 220, 475, 50, WHITE);
+			DrawText("Process:", 10, 550, 50, WHITE);
+			DrawText("Hormonal balance and homeostasis", 10, 625, 50, WHITE);
+			DrawText("Example: Hormones affect growth.", 225, 700, 50, WHITE);
+			if (testState)
+			{
+				BiologyTest[3].Draw();
+			}
 			break;
 		case 5:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Biology5", 400, 100, 50, WHITE);
+			DrawText("Sensory Systems", 165, 0, 65, BLACK);
+			DrawText("Main Function:", 10, 100, 50, WHITE);
+			DrawText("Perceiving and processing stimuli", 10, 175, 50, WHITE);
+			DrawText("Example: The eyes detect light.", 225, 250, 50, WHITE);
+			DrawText("Organs:", 10, 325, 50, WHITE);
+			DrawText("Eyes, ears, skin, tongue, nose", 10, 400, 50, WHITE);
+			DrawText("Example: The ears detect sound vibrations.", 220, 475, 50, WHITE);
+			DrawText("Process:", 10, 550, 50, WHITE);
+			DrawText("Stimuli reception and neural transmission", 10, 625, 50, WHITE);
+			DrawText("Example: The brain interprets signals.", 225, 700, 50, WHITE);
+			if (testState)
+			{
+				BiologyTest[4].Draw();
+			}
 			break;
 		case 6:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Biology6", 400, 100, 50, WHITE);
+			DrawText("Excretory System", 165, 0, 65, BLACK);
+			DrawText("Main Function:", 10, 100, 50, WHITE);
+			DrawText("Eliminating waste and maintaining balance", 10, 175, 50, WHITE);
+			DrawText("Example: The kidneys filter blood.", 225, 250, 50, WHITE);
+			DrawText("Organs:", 10, 325, 50, WHITE);
+			DrawText("Kidneys, bladder, ureters, urethra", 10, 400, 50, WHITE);
+			DrawText("Example: The bladder stores urine.", 220, 475, 50, WHITE);
+			DrawText("Process:", 10, 550, 50, WHITE);
+			DrawText("Filtration and excretion of waste", 10, 625, 50, WHITE);
+			DrawText("Example: Urine exits through the urethra.", 225, 700, 50, WHITE);
+			if (testState)
+			{
+				BiologyTest[5].Draw();
+			}
 			break;
 		}
 		break;
 	case 5:
+		if (lessonState != 0)
+		{
+			DrawRectangleRec(Testbutton, BLACK);
+			DrawText("Test", 730, 900, 50, WHITE);
+		}
 		switch (lessonState) {
 		case 0:
 			DrawText("Subject: Chemistry", 300, 0, 100, WHITE);
@@ -381,38 +470,76 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 		case 1:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Chemistry1", 400, 100, 50, WHITE);
+			DrawText("Atomic Structure", 165, 0, 65, BLACK);
+			DrawText("Atoms have a nucleus (protons + neutrons)", 10, 175, 50, WHITE);
+			DrawText("Example: Hydrogen has 1 proton, 0 neutrons.", 225, 250, 50, WHITE);
+			if (testState)
+			{
+				ChemistryTest[0].Draw();
+			}
 			break;
 		case 2:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Chemistry2", 400, 100, 50, WHITE);
+			DrawText("The Mole:", 10, 325, 50, BLACK);
+			DrawText("1 mole = 6.022×10²³ particles (Avogadro's number)", 10, 400, 50, WHITE);
+			DrawText("Example: 1 mole of CO₂ = 44 grams.", 220, 475, 50, WHITE);
+
+			if (testState)
+			{
+				ChemistryTest[1].Draw();
+			}
 			break;
 		case 3:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Chemistry3", 400, 100, 50, WHITE);
+			DrawText("Carbon Allotropes:", 10, 550, 50, BLACK);
+			DrawText("Graphite, diamond, graphene, fullerenes", 10, 625, 50, WHITE);
+			DrawText("Example: Diamond has a tetrahedral structure.", 225, 700, 50, WHITE);
+			if (testState)
+			{
+				ChemistryTest[2].Draw();
+			}
 			break;
 		case 4:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Chemistry4", 400, 100, 50, WHITE);
+			DrawText("Sulfur Dioxide (SO2):", 60, 100, 50, BLACK);
+			DrawText("Toxic gas, forms H2SO3 in water (acid rain)", 60, 175, 50, WHITE);
+			DrawText("Example: Released from burning fossil fuels.", 80, 250, 50, WHITE);
+			if (testState)
+			{
+				ChemistryTest[3].Draw();
+			}
 			break;
 		case 5:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Chemistry5", 400, 100, 50, WHITE);
+			DrawText("Chemical Bonds:", 60, 325, 50, BLACK);
+			DrawText("Ionic (electron transfer), covalent (sharing)", 60, 400, 50, WHITE);
+			DrawText("Example: NaCl = ionic, H2O = covalent.", 80, 475, 50, WHITE);
+			if (testState)
+			{
+				ChemistryTest[4].Draw();
+			}
 			break;
 		case 6:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Chemistry6", 400, 100, 50, WHITE);
+			DrawText("Acids & Bases:", 60, 550, 50, BLACK);
+			DrawText("Acids release H⁺, bases release OH-", 60, 625, 50, WHITE);
+			DrawText("Example: HCl = acid, NaOH = base.", 80, 700, 50, WHITE);
+			if (testState)
+			{
+				ChemistryTest[5].Draw();
+			}
 			break;
 		}
 		break;
 	}
 }
 
+// Checks for collisions, checks if a person clicks a button in the menu and updates the positions of the app objects
 void Menu::Update(int& appState, int& lessonState, bool& testState)
 {
 	SetMouseCursor(MOUSE_CURSOR_ARROW);
@@ -441,6 +568,12 @@ void Menu::Update(int& appState, int& lessonState, bool& testState)
 			MathTest[3].Reset();
 			MathTest[4].Reset();
 			MathTest[5].Reset();
+			EnglishTest[0].Reset();
+			EnglishTest[1].Reset();
+			EnglishTest[2].Reset();
+			EnglishTest[3].Reset();
+			EnglishTest[4].Reset();
+			EnglishTest[5].Reset();
 			if (appState != 1 && lessonState == 0)
 			{
 				appState = 1;
@@ -661,6 +794,7 @@ void Menu::Update(int& appState, int& lessonState, bool& testState)
 	}
 }
 
+// Initialize all test questions
 void Menu::initialiseTests()
 {
 	MathTest[0] = Test(1, 3, 0);
