@@ -1,4 +1,4 @@
-#include "menu.h"
+ï»¿#include "menu.h"
 #include <iostream>
 using namespace std;
 
@@ -92,9 +92,9 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 			DrawText("A triangle is a three-sided polygon with the sum", 10, 100, 50, WHITE);
 			DrawText("of its interior angles always 180 degrees.", 10, 175, 50, WHITE);
 			DrawText("Types of triangles by sides:", 10, 250, 50, WHITE);
-			DrawText("Acute triangle: All angles < 90°", 225, 325, 50, WHITE);
-			DrawText("Right triangle: One angle = 90°", 225, 400, 50, WHITE);
-			DrawText("Obtuse triangle: One angle > 90°", 225, 475, 50, WHITE);
+			DrawText("Acute triangle: All angles < 90Â°", 225, 325, 50, WHITE);
+			DrawText("Right triangle: One angle = 90Â°", 225, 400, 50, WHITE);
+			DrawText("Obtuse triangle: One angle > 90Â°", 225, 475, 50, WHITE);
 			DrawText("Pythagoras' Theorem (for right-angled triangles)", 10, 550, 50, WHITE);
 			DrawText("a2 + b2 = c2", 225, 625, 50, WHITE);
 			if (testState)
@@ -137,7 +137,16 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 		case 5:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Math5", 400, 100, 50, WHITE);
+			DrawText("Algebraic Expressions and Identities.", 165, 0, 65, BLACK);
+			DrawText("Example: 3x + 5", 225, 100, 50, WHITE);
+			DrawText("Terms: Parts of an expression separated by + or -.", 10, 175, 50, WHITE);
+			DrawText("Example: in 2x + 3y - 4, the terms are2x, 3y, and - 4", 200, 250, 50, WHITE);
+			DrawText("Like Terms: Terms with the same variables and", 10, 325, 50, WHITE);
+			DrawText("exponents.", 10, 400, 50, WHITE);
+			DrawText("Example: 2x and 5x are like terms", 225, 475, 50, WHITE);
+			DrawText("dentities: Equations that are always true for", 10, 550, 50, WHITE);
+			DrawText("any value of the variables.", 10, 625, 50, WHITE);
+			DrawText("Example: (a + b)2 = a2 + 2ab + b2", 225, 700, 50, WHITE);
 			if (testState)
 			{
 				MathTest[4].Draw();
@@ -146,7 +155,16 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 		case 6:
 			DrawRectangleRec(Return, BLACK);
 			DrawText("Return", 1010, 900, 50, WHITE);
-			DrawText("Math6", 165, 100, 50, WHITE);
+			DrawText("Circles and Their Properties", 165, 0, 65, BLACK);
+			DrawText("A circle is a set of points in a plane that are", 10, 100, 50, WHITE);
+			DrawText("all equidistant from a fixed center.", 10, 175, 50, WHITE);
+			DrawText("Radius (r): Distance from the center to any", 10, 250, 50, WHITE);
+			DrawText("point on the circle.", 10, 325, 50, WHITE);
+			DrawText("Diameter (d): Longest chord, d = 2r", 10, 400, 50, WHITE);
+			DrawText("Circumference (C): Perimeter of the circle, C = 2pi * r.", 10, 475, 50, WHITE);
+			DrawText("Area (A): Space inside the circle, A = pi * r2", 10, 550, 50, WHITE);
+			DrawText("Chord: A line segment inside the circle", 10, 625, 50, WHITE);
+			DrawText("connecting two points.", 10, 700, 50, WHITE);
 			if (testState)
 			{
 				MathTest[5].Draw();
@@ -188,10 +206,10 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 			DrawText("He/She/It + verb + -s/-es", 10, 325, 50, WHITE);
 			DrawText("Example: He works in a bank.", 225, 400, 50, WHITE);
 			DrawText("Negative sentences:", 10, 475, 50, WHITE);
-			DrawText("I/You/We/They + do not (don’t) + base form of the verb", 10, 550, 50, WHITE);
-			DrawText("Example: I don’t like coffee.", 225, 625, 50, WHITE);
-			DrawText("He/She/It + does not (doesn’t) + base form of the verb", 10, 700, 50, WHITE);
-			DrawText("Example: She doesn’t eat meat.", 225, 775, 50, WHITE);
+			DrawText("I/You/We/They + do not (donâ€™t) + base form of the verb", 10, 550, 50, WHITE);
+			DrawText("Example: I donâ€™t like coffee.", 225, 625, 50, WHITE);
+			DrawText("He/She/It + does not (doesnâ€™t) + base form of the verb", 10, 700, 50, WHITE);
+			DrawText("Example: She doesnâ€™t eat meat.", 225, 775, 50, WHITE);
 			if (testState)
 			{
 				EnglishTest[0].Draw();
@@ -207,8 +225,8 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 			DrawText("For irregular verbs: second form of the verbs", 10, 325, 50, WHITE);
 			DrawText("Example: He (go -> went) to school.", 225, 400, 50, WHITE);
 			DrawText("Negative sentences:", 10, 475, 50, WHITE);
-			DrawText("did + not (didn’t) + base form of the verb", 10, 550, 50, WHITE);
-			DrawText("Example: I did not (didn’t) work yesterday.", 225, 625, 50, WHITE);
+			DrawText("did + not (didnâ€™t) + base form of the verb", 10, 550, 50, WHITE);
+			DrawText("Example: I did not (didnâ€™t) work yesterday.", 225, 625, 50, WHITE);
 			DrawText("Questions:", 10, 700, 50, WHITE);
 			DrawText("Example: Did you work yesterday?", 225, 775, 50, WHITE);
 			if (testState)
@@ -243,7 +261,7 @@ void Menu::Draw(int appState, int lessonState, bool testState)
 			DrawText("Example: I was reading a book.", 225, 250,  50, WHITE);
 			DrawText("Negative sentances:", 10, 325, 50, WHITE);
 			DrawText("was/were + not + verb + -ing", 10, 400, 50, WHITE);
-			DrawText("Example: I was not (wasn’t) working.", 225, 475, 50, WHITE);
+			DrawText("Example: I was not (wasnâ€™t) working.", 225, 475, 50, WHITE);
 			DrawText("Questions:", 10, 550, 50, WHITE);
 			DrawText("Was/Were + subject + verb + -ing? ", 10, 625, 50, WHITE);
 			DrawText("Example: Was she sleeping?", 225, 700, 50, WHITE);
@@ -647,15 +665,15 @@ void Menu::initialiseTests()
 	MathTest[3].addQuestion("x2 + 5x + 6", { "-(x+2)(x+3)", "(x+3)", "(x+2)(x+3)", "(x+2)" });
 	MathTest[3].addQuestion("6x2 - 16", { "(x+4)", "(x+1)(x+2)", "(x-3)(x+4)", "(x-4)(x+4)" });
 	
-	MathTest[4] = Test(1, 1, 1);
-	MathTest[4].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
-	MathTest[4].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
-	MathTest[4].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	MathTest[4] = Test(0, 2, 3);
+	MathTest[4].addQuestion("Simplify: 3x + 5x - 2 + 7", { " 8x + 5", " 8x - 5", " 13x", " 5 - x" });
+	MathTest[4].addQuestion("Simplify: x2 + 5x + 6", { " (x - 2)(x + 3)", " (x - 2)(x + 6)", " (x + 2)(x + 3)", " (x - 4)(x + 3)" });
+	MathTest[4].addQuestion("Simplify: 4x - 3x + 7 - 2", { " 5x", " 5 - x", " x - 5", " x + 5" });
 	
-	MathTest[5] = Test(1, 1, 1);
-	MathTest[5].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
-	MathTest[5].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
-	MathTest[5].addQuestion("What is 2 + 2", { "One", "Two", "Three", "Four" });
+	MathTest[5] = Test(1, 0, 2);
+	MathTest[5].addQuestion("Find C = ?, if r = 7", { " 14", " 14pi", " 7", " 7pi" });
+	MathTest[5].addQuestion("Find A = ?, if d = 10", { "25pi", "100", "100pi", "25" });
+	MathTest[5].addQuestion("Find r = ?, if C = 31.4", { "5pi", "10", "5", "15" });
 
 	EnglishTest[0] = Test(2, 0, 3);
 	EnglishTest[0].addQuestion("She ______ (go) to school every day.", { "goes", "gos", "go", "to go" });
